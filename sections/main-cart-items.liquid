@@ -428,11 +428,8 @@
     },
     methods: {
       get_cart() {
-        $.get('/cart.js')
-        .then(response => {
-          	console.log(response);
-        	return JSON.parse(response)
-        }) 
+        fetch('/cart.js')
+        .then(response => response.json())
         .then(cart => {
           this.set_cart(cart);
         })
