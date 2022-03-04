@@ -418,7 +418,7 @@
       }
     },
     created() {
-//       this.get_cart();
+      this.get_cart();
     },
     computed: {
       filtered_upsells() {
@@ -431,6 +431,7 @@
         $.get('/cart.js')
         .then(response => JSON.parse(response)) 
         .then(cart => {
+          console.log(cart);
           this.set_cart(cart);
         })
       },
