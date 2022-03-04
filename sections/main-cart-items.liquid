@@ -428,6 +428,7 @@
     },
     methods: {
       get_cart() {
+        console.log('Inside get_cart');
         $.get('/cart.js')
         .then(response => {
           	console.log(response);
