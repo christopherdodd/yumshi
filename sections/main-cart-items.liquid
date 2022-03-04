@@ -429,9 +429,8 @@
     methods: {
       get_cart() {
         $.get('/cart.js')
-        .then(response => JSON.parse(response)) 
+        .then(response => response.json()) 
         .then(cart => {
-          console.log(cart);
           this.set_cart(cart);
         })
       },
