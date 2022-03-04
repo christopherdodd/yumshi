@@ -431,6 +431,7 @@
         $.get('/cart.js')
         .then(response => JSON.parse(response)) 
         .then(cart => {
+          console.log(cart);
           this.set_cart(cart);
         })
       },
